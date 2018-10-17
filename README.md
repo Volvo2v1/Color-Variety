@@ -2,14 +2,9 @@
 
 Make your console applications pretty with variety of colors!
 
-**Tested with:**
-* [x] XTerm
-* [x] Konsole
-* [x] Terminator
-* [x] Gnome-Terminal
 
 **Compatible with:**
-* [x] Any terminal that supports PS1
+* [x] Any bash shell Bash   //(PS1)
 
 
 ## Building:
