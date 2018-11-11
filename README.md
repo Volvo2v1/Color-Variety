@@ -4,7 +4,7 @@ Make your console applications pretty with variety of colors!
 
 
 **Compatible with:**
-* [x] Any bash shell Bash   //(PS1)
+* [x] Any Bash shell   //(PS1)
 
 
 ## Building:
