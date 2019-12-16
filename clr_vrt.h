@@ -1,7 +1,7 @@
 /* 
 MIT License
 
-Copyright (c) 2018 Volvo2v1
+Copyright (c) 2019 Volvo2v1
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -37,84 +37,202 @@ https://paypal.me/2v1
 #ifndef _CLR_VRT_H_
 #define _CLR_VRT_H_
 
-//PRINTF
+int printf_c(const char *_str, const char *_clr, ...);
+
+#define _CLR_RED                "\033[0;31m"
+#define _CLR_LIGHT_RED          "\033[38;5;203m"
+#define _CLR_DARK_RED           "\033[38;5;1m"
+
+#define _CLR_GREEN              "\033[0;32m"
+#define _CLR_LIGHT_GREEN        "\033[38;5;10m"
+#define _CLR_DARK_GREEN         "\033[38;5;34m"
+#define _CLR_LIME               "\033[38;5;118m"
+
+#define _CLR_YELLOW             "\033[38;5;226m"
+#define _CLR_LIGHT_YELLOW       "\033[38;5;227m"
+#define _CLR_DARK_YELLOW        "\033[38;5;220m"
+
+#define _CLR_ORANGE             "\033[38;5;208m"
+#define _CLR_LIGHT_ORANGE       "\033[38;5;214m"
+#define _CLR_DARK_ORANGE        "\033[38;5;202m"
+
+#define _CLR_BLUE               "\033[0;34m"
+#define _CLR_LIGHT_BLUE         "\033[38;5;33m"
+#define _CLR_NAVY               "\033[38;5;21m "
+#define _CLR_DARK_BLUE          "\033[38;5;19m"
+#define _CLR_CYAN               "\033[38;5;14m"
+#define _CLR_NEON_CYAN          "\033[38;5;51m"
+
+#define _CLR_PURPLE             "\033[0;35m"
+#define _CLR_LIGHT_PURPLE       "\033[38;5;93m"
+#define _CLR_DARK_PURPLE        "\033[38;5;91m"
+
+#define _CLR_PINK               "\033[38;5;205m"
+#define _CLR_LIGHT_PINK         "\033[38;5;218m"
+#define _CLR_NEON_PINK          "\033[38;5;198m"
+#define _CLR_DARK_PINK          "\033[38;5;197m"
+#define _CLR_FUCHSIA            "\033[38;5;164m"
+#define _CLR_MAGENTA            "\033[38;5;200m"
+
+#define _CLR_GREY               "\033[38;5;7m"
+#define _CLR_WHITE              "\033[0;97m"
+#define _CLR_BLACK              "\033[0;37m"
+
+/* bold */
+
+#define _BOLD_CLR_RED            "\033[1;38;5;203m"
+#define _BOLD_CLR_LIGHT_RED      "\033[1;38;5;1m"
+#define _BOLD_CLR_DARK_RED       "\033[1;32m"
+
+#define _BOLD_CLR_GREEN          "\033[1;38;5;10m"
+#define _BOLD_CLR_LIGHT_GREEN    "\033[1;38;5;34m"
+#define _BOLD_CLR_DARK_GREEN     "\033[1;38;5;118m"
+#define _BOLD_CLR_LIME           "\033[1;38;5;226m"
+
+#define _BOLD_CLR_YELLOW         "\033[1;38;5;227m"
+#define _BOLD_CLR_LIGHT_YELLOW   "\033[1;38;5;220m"
+#define _BOLD_CLR_DARK_YELLOW    "\033[1;38;5;208m"
+
+#define _BOLD_CLR_ORANGE         "\033[1;38;5;214m"
+#define _BOLD_CLR_LIGHT_ORANGE   "\033[1;38;5;202m"
+#define _BOLD_CLR_DARK_ORANGE    "\033[1;34m"
+
+#define _BOLD_CLR_BLUE           "\033[1;38;5;33m"
+#define _BOLD_CLR_LIGHT_BLUE     "\033[1;38;5;21m "
+#define _BOLD_CLR_NAVY           "\033[1;38;5;19m"
+#define _BOLD_CLR_DARK_BLUE      "\033[1;38;5;14m"
+#define _BOLD_CLR_CYAN           "\033[1;38;5;51m"
+#define _BOLD_CLR_NEON_CYAN      "\033[1;35m"
+
+#define _BOLD_CLR_PURPLE         "\033[1;38;5;93m"
+#define _BOLD_CLR_LIGHT_PURPLE   "\033[1;38;5;91m"
+#define _BOLD_CLR_DARK_PURPLE    "\033[1;38;5;205m"
+
+#define _BOLD_CLR_PINK           "\033[1;38;5;218m"
+#define _BOLD_CLR_LIGHT_PINK     "\033[1;38;5;198m"
+#define _BOLD_CLR_NEON_PINK      "\033[1;38;5;197m"
+#define _BOLD_CLR_DARK_PINK      "\033[1;38;5;164m"
+#define _BOLD_CLR_FUCHSIA        "\033[1;38;5;200m"
+#define _BOLD_CLR_MAGENTA        "\033[1;38;5;0m"
+
+#define _BOLD_CLR_GREY           "\033[1;38;5;7m"
+#define _BOLD_CLR_WHITE          "\033[1;97m"
+#define _BOLD_CLR_BLACK          "\033[1;30m"
+
+/* special */
+
+#define _SPEC_CLR_SYRUP          "\033[38;5;52m"
+#define _SPEC_CLR_AMARANTH       "\033[38;5;211m"
+#define _SPEC_CLR_OLIVE          "\033[38;5;58m"
+#define _SPEC_CLR_CANDYAPPLE     "\033[38;5;9m"
+#define _SPEC_CLR_EMERALD        "\033[38;5;121m"
+#define _SPEC_CLR_FORESTGREEN    "\033[38;5;2m"     
+#define _SPEC_CLR_CARAMEL        "\033[38;5;166m" 
+
+/* special bold */
+
+#define _SPEC_BOLD_CLR_SYRUP          "\033[1;38;5;52m"
+#define _SPEC_BOLD_CLR_AMARANTH       "\033[1;38;5;211m"
+#define _SPEC_BOLD_CLR_OLIVE          "\033[1;38;5;58m"
+#define _SPEC_BOLD_CLR_CANDYAPPLE     "\033[1;38;5;9m"
+#define _SPEC_BOLD_CLR_EMERALD        "\033[1;38;5;121m"
+#define _SPEC_BOLD_CLR_FORESTGREEN    "\033[1;38;5;2m"     
+#define _SPEC_BOLD_CLR_CARAMEL        "\033[1;38;5;166m" 
+
+
+/* printf_clr */
+
+#define printf_red(_str, ...)           { printf_c(_str, _CLR_RED           , __VA_ARGS__); }
+#define printf_lightred(_str, ...)      { printf_c(_str, _CLR_LIGHT_RED     , __VA_ARGS__); }
+#define printf_darkred(_str, ...)       { printf_c(_str, _CLR_DARK_RED      , __VA_ARGS__); }
+#define printf_green(_str, ...)         { printf_c(_str, _CLR_GREEN         , __VA_ARGS__); }
+#define printf_lightgreen(_str, ...)    { printf_c(_str, _CLR_LIGHT_GREEN   , __VA_ARGS__); }
+#define printf_darkgreen(_str, ...)     { printf_c(_str, _CLR_DARK_GREEN    , __VA_ARGS__); }
+#define printf_lime(_str, ...)          { printf_c(_str, _CLR_LIME          , __VA_ARGS__); }
+#define printf_yellow(_str, ...)        { printf_c(_str, _CLR_YELLOW        , __VA_ARGS__); }
+#define printf_lightyellow(_str, ...)   { printf_c(_str, _CLR_LIGHT_YELLOW  , __VA_ARGS__); }
+#define printf_darkyellow(_str, ...)    { printf_c(_str, _CLR_DARK_YELLOW   , __VA_ARGS__); }
+#define printf_orange(_str, ...)        { printf_c(_str, _CLR_ORANGE        , __VA_ARGS__); }
+#define printf_lightorange(_str, ...)   { printf_c(_str, _CLR_LIGHT_ORANGE  , __VA_ARGS__); }
+#define printf_darkorange(_str, ...)    { printf_c(_str, _CLR_DARK_ORANGE   , __VA_ARGS__); }
+#define printf_blue(_str, ...)          { printf_c(_str, _CLR_BLUE          , __VA_ARGS__); }
+#define printf_lightblue(_str, ...)     { printf_c(_str, _CLR_LIGHT_BLUE    , __VA_ARGS__); }
+#define printf_navy(_str, ...)          { printf_c(_str, _CLR_NAVY          , __VA_ARGS__); }
+#define printf_darkblue(_str, ...)      { printf_c(_str, _CLR_DARK_BLUE     , __VA_ARGS__); }
+#define printf_cyan(_str, ...)          { printf_c(_str, _CLR_CYAN          , __VA_ARGS__); }
+#define printf_neoncyan(_str, ...)      { printf_c(_str, _CLR_NEON_CYAN     , __VA_ARGS__); }
+#define printf_purple(_str, ...)        { printf_c(_str, _CLR_PURPLE        , __VA_ARGS__); }
+#define printf_lightpurple(_str, ...)   { printf_c(_str, _CLR_LIGHT_PURPLE  , __VA_ARGS__); }
+#define printf_darkpurple(_str, ...)    { printf_c(_str, _CLR_DARK_PURPLE   , __VA_ARGS__); }
+#define printf_pink(_str, ...)          { printf_c(_str, _CLR_PINK          , __VA_ARGS__); }
+#define printf_lightpink(_str, ...)     { printf_c(_str, _CLR_LIGHT_PINK    , __VA_ARGS__); }
+#define printf_neonpink(_str, ...)      { printf_c(_str, _CLR_NEON_PINK     , __VA_ARGS__); }
+#define printf_darkpink(_str, ...)      { printf_c(_str, _CLR_DARK_PINK     , __VA_ARGS__); }
+#define printf_fuchsia(_str, ...)       { printf_c(_str, _CLR_FUCHSIA       , __VA_ARGS__); }
+#define printf_magenta(_str, ...)       { printf_c(_str, _CLR_MAGENTA       , __VA_ARGS__); }
+#define printf_grey(_str, ...)          { printf_c(_str, _CLR_GREY          , __VA_ARGS__); }
+#define printf_white(_str, ...)         { printf_c(_str, _CLR_WHITE         , __VA_ARGS__); }
+#define printf_black(_str, ...)         { printf_c(_str, _CLR_BLACK         , __VA_ARGS__); }
+
+/* printf_bold_clr */
+
+#define printf_bold_red(_str, ...)         { printf_c(_str, _BOLD_CLR_RED           , __VA_ARGS__); }
+#define printf_bold_lightred(_str, ...)    { printf_c(_str, _BOLD_CLR_LIGHT_RED     , __VA_ARGS__); }
+#define printf_bold_darkred(_str, ...)     { printf_c(_str, _BOLD_CLR_DARK_RED      , __VA_ARGS__); }
+#define printf_bold_green(_str, ...)       { printf_c(_str, _BOLD_CLR_GREEN         , __VA_ARGS__); }
+#define printf_bold_lightgreen(_str, ...)  { printf_c(_str, _BOLD_CLR_LIGHT_GREEN   , __VA_ARGS__); }
+#define printf_bold_darkgreen(_str, ...)   { printf_c(_str, _BOLD_CLR_DARK_GREEN    , __VA_ARGS__); }
+#define printf_bold_lime(_str, ...)        { printf_c(_str, _BOLD_CLR_LIME          , __VA_ARGS__); }
+#define printf_bold_yellow(_str, ...)      { printf_c(_str, _BOLD_CLR_YELLOW        , __VA_ARGS__); }
+#define printf_bold_lightyellow(_str, ...) { printf_c(_str, _BOLD_CLR_LIGHT_YELLOW  , __VA_ARGS__); }
+#define printf_bold_darkyellow(_str, ...)  { printf_c(_str, _BOLD_CLR_DARK_YELLOW   , __VA_ARGS__); }
+#define printf_bold_orange(_str, ...)      { printf_c(_str, _BOLD_CLR_ORANGE        , __VA_ARGS__); }
+#define printf_bold_lightorange(_str, ...) { printf_c(_str, _BOLD_CLR_LIGHT_ORANGE  , __VA_ARGS__); }
+#define printf_bold_darkorange(_str, ...)  { printf_c(_str, _BOLD_CLR_DARK_ORANGE   , __VA_ARGS__); }
+#define printf_bold_blue(_str, ...)        { printf_c(_str, _BOLD_CLR_BLUE          , __VA_ARGS__); }
+#define printf_bold_lightblue(_str, ...)   { printf_c(_str, _BOLD_CLR_LIGHT_BLUE    , __VA_ARGS__); }
+#define printf_bold_navy(_str, ...)        { printf_c(_str, _BOLD_CLR_NAVY          , __VA_ARGS__); }
+#define printf_bold_darkblue(_str, ...)    { printf_c(_str, _BOLD_CLR_DARK_BLUE     , __VA_ARGS__); }
+#define printf_bold_cyan(_str, ...)        { printf_c(_str, _BOLD_CLR_CYAN          , __VA_ARGS__); }
+#define printf_bold_neoncyan(_str, ...)    { printf_c(_str, _BOLD_CLR_NEON_CYAN     , __VA_ARGS__); }
+#define printf_bold_purple(_str, ...)      { printf_c(_str, _BOLD_CLR_PURPLE        , __VA_ARGS__); }
+#define printf_bold_lightpurple(_str, ...) { printf_c(_str, _BOLD_CLR_LIGHT_PURPLE  , __VA_ARGS__); }
+#define printf_bold_darkpurple(_str, ...)  { printf_c(_str, _BOLD_CLR_DARK_PURPLE   , __VA_ARGS__); }
+#define printf_bold_pink(_str, ...)        { printf_c(_str, _BOLD_CLR_PINK          , __VA_ARGS__); }
+#define printf_bold_lightpink(_str, ...)   { printf_c(_str, _BOLD_CLR_LIGHT_PINK    , __VA_ARGS__); }
+#define printf_bold_neonpink(_str, ...)    { printf_c(_str, _BOLD_CLR_NEON_PINK     , __VA_ARGS__); }
+#define printf_bold_darkpink(_str, ...)    { printf_c(_str, _BOLD_CLR_DARK_PINK     , __VA_ARGS__); }
+#define printf_bold_fuchsia(_str, ...)     { printf_c(_str, _BOLD_CLR_FUCHSIA       , __VA_ARGS__); }
+#define printf_bold_magenta(_str, ...)     { printf_c(_str, _BOLD_CLR_MAGENTA       , __VA_ARGS__); }
+#define printf_bold_grey(_str, ...)        { printf_c(_str, _BOLD_CLR_GREY          , __VA_ARGS__); }
+#define printf_bold_white(_str, ...)       { printf_c(_str, _BOLD_CLR_WHITE         , __VA_ARGS__); }
+#define printf_bold_black(_str, ...)       { printf_c(_str, _BOLD_CLR_BLACK         , __VA_ARGS__); }
+
+/* SPECIAL PRINTF */
+
+#define printf_syrup(_str, ...)             { printf_c(_str, __SPEC_CLR_SYRUP         , __VA_ARGS__); }
+#define printf_amaranth(_str, ...)          { printf_c(_str, __SPEC_CLR_AMARANTH      , __VA_ARGS__); }
+#define printf_olive(_str, ...)             { printf_c(_str, __SPEC_CLR_OLIVE         , __VA_ARGS__); }
+#define printf_candyapple(_str, ...)        { printf_c(_str, __SPEC_CLR_CANDYAPPLE    , __VA_ARGS__); }
+#define printf_emerald(_str, ...)           { printf_c(_str, __SPEC_CLR_EMERALD       , __VA_ARGS__); }
+#define printf_forestgreen(_str, ...)       { printf_c(_str, __SPEC_CLR_FORESTGREEN   , __VA_ARGS__); }
+#define printf_caramel(_str, ...)           { printf_c(_str, __SPEC_CLR_CARAMEL       , __VA_ARGS__); }
+
+/* BOLD SPECIAL PRINTF */
+
+#define printf_bold_syrup(_str, ...)        { printf_c(_str, __SPEC_BOLD_CLR_SYRUP         , __VA_ARGS__); }
+#define printf_bold_amaranth(_str, ...)     { printf_c(_str, __SPEC_BOLD_CLR_AMARANTH      , __VA_ARGS__); }
+#define printf_bold_olive(_str, ...)        { printf_c(_str, __SPEC_BOLD_CLR_OLIVE         , __VA_ARGS__); }
+#define printf_bold_candyapple(_str, ...)   { printf_c(_str, __SPEC_BOLD_CLR_CANDYAPPLE    , __VA_ARGS__); }
+#define printf_bold_emerald(_str, ...)      { printf_c(_str, __SPEC_BOLD_CLR_EMERALD       , __VA_ARGS__); }
+#define printf_bold_forestgreen(_str, ...)  { printf_c(_str, __SPEC_BOLD_CLR_FORESTGREEN   , __VA_ARGS__); }
+#define printf_bold_caramel(_str, ...)      { printf_c(_str, __SPEC_BOLD_CLR_CARAMEL       , __VA_ARGS__); }
+
+/* reset */
 
 void resetcolor();
 
-void printf_red(char *__std_out);
-void printf_lightred(char *__std_out);
-void printf_darkred(char *__std_out);
-
-void printf_green(char *__std_out);
-void printf_lightgreen(char *__std_out);
-void printf_darkgreen(char *__std_out);
-void printf_lime(char *__std_out);
-
-void printf_yellow(char *__std_out);
-void printf_lightyellow(char *__std_out);
-void printf_darkyellow(char *__std_out);
-
-void printf_orange(char *__std_out);
-void printf_lightorange(char *__std_out);
-void printf_darkorange(char *__std_out);
-
-void printf_blue(char *__std_out);
-void printf_lightblue(char *__std_out);
-void printf_navy(char *__std_out);
-void printf_darkblue(char *__std_out);
-void printf_cyan(char *__std_out);
-void printf_neoncyan(char *__std_out);
-
-void printf_purple(char *__std_out);
-void printf_lightpurple(char *__std_out);
-void printf_darkpurple(char *__std_out);
-
-void printf_pink(char *__std_out);
-void printf_lightpink(char *__std_out);
-void printf_neonpink(char *__std_out);
-void printf_darkpink(char *__std_out);
-void printf_fuchsia(char *__std_out);
-void printf_magenta(char *__std_out);
-
-void printf_black(char *__std_out);
-void printf_grey(char *__std_out);
-void printf_white(char *__std_out);
-
-//PRINTF BOLD
-
-void printf_bold_red(char *__std_out);
-void printf_bold_lightred(char *__std_out);
-void printf_bold_darkred(char *__std_out);
-void printf_bold_green(char *__std_out);
-void printf_bold_lightgreen(char *__std_out);
-void printf_bold_darkgreen(char *__std_out);
-void printf_bold_lime(char *__std_out);
-void printf_bold_yellow(char *__std_out);
-void printf_bold_lightyellow(char *__std_out);
-void printf_bold_darkyellow(char *__std_out);
-void printf_bold_orange(char *__std_out);
-void printf_bold_lightorange(char *__std_out);
-void printf_bold_darkorange(char *__std_out);
-void printf_bold_blue(char *__std_out);
-void printf_bold_lightblue(char *__std_out);
-void printf_bold_navy(char *__std_out);
-void printf_bold_darkblue(char *__std_out);
-void printf_bold_cyan(char *__std_out);
-void printf_bold_neoncyan(char *__std_out);
-void printf_bold_purple(char *__std_out);
-void printf_bold_lightpurple(char *__std_out);
-void printf_bold_darkpurple(char *__std_out);
-void printf_bold_pink(char *__std_out);
-void printf_bold_lightpink(char *__std_out);
-void printf_bold_neonpink(char *__std_out);
-void printf_bold_darkpink(char *__std_out);
-void printf_bold_fuchsia(char *__std_out);
-void printf_bold_magenta(char *__std_out);
-void printf_bold_black(char *__std_out);
-void printf_bold_grey(char *__std_out);
-void printf_bold_white(char *__std_out);
-
-// GLOBAL
+/* GLOBAL */
 
 void clr_red();           // \033[0;31m
 void clr_lightred();      // \033[38;5;203m
@@ -156,7 +274,7 @@ void clr_grey();  // \033[38;5;7m
 void clr_white(); // \033[0;37m
 
 
-// GLOBAL BOLD
+/* GLOBAL BOLD */
 
 void bold_clr_red();           // \033[1;31m
 void bold_clr_lightred();      // \033[1;38;5;203m
@@ -193,33 +311,12 @@ void bold_clr_darkpink();  	  // \033[1;38;5;197m
 void bold_clr_fuchsia();   	  // \033[1;38;5;164m
 void bold_clr_magenta();   	  // \033[1;38;5;200m
 
-void bold_clr_black(); // \033[1;38;5;0m
+void bold_clr_black(); // \033[1;30m
 void bold_clr_grey();  // \033[1;38;5;7m
-void bold_clr_white(); // \033[1;37m
+void bold_clr_white(); // \033[1;97m
 
 
-//SPECIAL PRINTF
-
-void printf_syrup(char *__std_out);                           // \033[38;5;52m
-void printf_amaranth(char *__std_out);                       // \033[38;5;211m
-void printf_olive(char *__std_out);                         // \033[38;5;58m
-void printf_candyapple(char *__std_out);                   // \033[38;5;9m
-void printf_emerald(char *__std_out);                     // \033[38;5;121m
-void printf_forestgreen(char *__std_out);                // \033[38;5;2m
-void printf_caramel(char *__std_out);                   // \033[38;5;166m
-
-// PRINTF BOLD SPECIAL
-
-void printf_bold_syrup(char *__std_out);             // \033[1;38;5;52m
-void printf_bold_amaranth(char *__std_out);         // \033[1;38;5;211m
-void printf_bold_olive(char *__std_out);           // \033[1;38;5;58m
-void printf_bold_candyapple(char *__std_out);     // \033[1;38;5;9m
-void printf_bold_emerald(char *__std_out);       // \033[1;38;5;121m
-void printf_bold_forestgreen(char *__std_out);  // \033[1;38;5;2m
-void printf_bold_caramel(char *__std_out);     // \033[1;38;5;166m
-
-
-//SPECIAL
+/* SPECIAL */
 
 void clr_syrup();            // \033[38;5;52m
 void clr_amaranth();        // \033[38;5;211m
@@ -229,7 +326,7 @@ void clr_emerald();      // \033[38;5;121m
 void clr_forestgreen(); // \033[38;5;2m
 void clr_caramel();    // \033[38;5;166m
 
-// BOLD SPECIAL
+/* BOLD SPECIAL */
 
 void clr_syrup();            // \033[1;38;5;52m
 void clr_amaranth();        // \033[1;38;5;211m
@@ -238,5 +335,6 @@ void clr_candyapple();    // \033[1;38;5;9m
 void clr_emerald();      // \033[1;38;5;121m
 void clr_forestgreen(); // \033[1;38;5;2m
 void clr_caramel();    // \033[1;38;5;166m
+
 
 #endif
