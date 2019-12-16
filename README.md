@@ -4,11 +4,11 @@ Make your console applications pretty with variety of colors!
 
 
 **Compatible with:**
-* [x] Any Bash shell   //(PS1)
+* [x] Any shell with PS1 support //(PS1)
 
 
 ## Building:
-**Building:** `gcc -o clr_vrt.o -c clr_vrt.c`
+**Building:** `make`
 
 **Linking:**  `gcc example.c clr_vrt.o`
 
@@ -21,15 +21,19 @@ Make your console applications pretty with variety of colors!
 #include <stdio.h>
 
 void main() {
-    //Print one line of red text:
+    /* Print one line of red text: */
     printf_red("Red Text\n");
 
-    //Init color (Colorize multiple lines):
+    /* Print one line of formatted text */
+    int x = 3;
+    printf_red("int x = %d\n", x);
+
+    /* Init color (Colorize multiple lines): */
     clr_red();
     printf("First red line\n");
     printf("Second red line\n);
     
-    //Remove color output (reset color):
+    /* Remove color output (reset color): */
     resetcolor();
 
     printf("This text is not red\n");
