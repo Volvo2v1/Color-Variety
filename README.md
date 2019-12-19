@@ -10,7 +10,7 @@ Make your console applications pretty with variety of colors!
 ## Building:
 **Building:** `make`
 
-**Linking:**  `gcc example.c clr_vrt.o`
+**Linking:**  `gcc example.c clr.o`
 
 **Include:**  `#include "clr_vrt.h"`
 
