@@ -34,8 +34,8 @@ https://paypal.me/2v1
 
 */
 
-#ifndef _CLR_VRT_H_
-#define _CLR_VRT_H_
+#ifndef _COLOR_H_
+#define _COLOR_H_
 
 int printf_c(const char *_str, const char *_clr, ...);
 
