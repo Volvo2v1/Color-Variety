@@ -8,16 +8,34 @@ Make your console applications pretty with variety of colors!
 
 
 ## Building:
+
+### Local:
+
 **Building:** `make`
 
 **Linking:**  `gcc example.c clr.o`
 
-**Include:**  `#include "clr_vrt.h"`
+**Include:**  `#include "color.h"`
+
+### System-wide:
+
+**Installing:** `make install`
+
+**Linking:**    `gcc example.c -lcolor`
+
+**Include:**    `#include <ykb39/color.h>`
+
+**Uninstall:**  `make uninstall`
 
 
 ## Sample usage:
 ```
-#include "clr_vrt.h"
+// Local
+#include "color.h"
+
+// System-wide
+#include <ykb39/color.h>
+
 #include <stdio.h>
 
 void main() {
