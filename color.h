@@ -39,6 +39,8 @@ https://paypal.me/2v1
 
 int printf_c(const char *_str, const char *_clr, ...);
 
+#define _CLR_RESET              "\033[0m"
+
 #define _CLR_RED                "\033[0;31m"
 #define _CLR_LIGHT_RED          "\033[38;5;203m"
 #define _CLR_DARK_RED           "\033[38;5;1m"
